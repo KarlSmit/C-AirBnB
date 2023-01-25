@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\CustomerDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CustomerList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LandlordDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LandlordList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LocationDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LocationList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ReservationDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ReservationList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RoomDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CustomerDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CustomerList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LandlordDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LandlordList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LocationDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LocationList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ReservationDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ReservationList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RoomDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

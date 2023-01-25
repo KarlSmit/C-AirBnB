@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="Air_BnB.View.RoomDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-RoomDetails:Air_BnB.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Content="Create" Command="{Binding CreateRoomCommand}"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="Edit" Command="{Binding EditRoomCommand}" CommandParameter="{Binding Room.Id}"/>
+            <Button Grid.Row="0" Grid.Column="4" Content="Delete" Command="{Binding DeleteRoomCommand}" CommandParameter="{Binding Room.Id}"/>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label>StreetName:</Label>
+            <TextBox Text="{Binding Room.StreetName}" 
+                Visibility="{Binding TextBoxVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalContentAlignment="Center" />
+            <TextBlock Text="{Binding Room.StreetName}" 
+                Visibility="{Binding TextBlockVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
+
+            <Label>StreetNumber:</Label>
+            <TextBox Text="{Binding Room.StreetNumber}" 
+                Visibility="{Binding TextBoxVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalContentAlignment="Center" />
+            <TextBlock Text="{Binding Room.StreetNumber}" 
+                Visibility="{Binding TextBlockVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
+
+            <Label>Postal code:</Label>
+            <TextBox Text="{Binding Room.PostalCode}" 
+                Visibility="{Binding TextBoxVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalContentAlignment="Center" />
+            <TextBlock Text="{Binding Room.PostalCode}" 
+                Visibility="{Binding TextBlockVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
+
+            <Label>Price:</Label>
+            <TextBox Text="{Binding Room.Price}" 
+                Visibility="{Binding TextBoxVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalContentAlignment="Center" />
+            <TextBlock Text="{Binding Room.Price}" 
+                Visibility="{Binding TextBlockVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
+
+            <Label>Person amount:</Label>
+            <TextBox Text="{Binding Room.PersonAmount}" 
+                Visibility="{Binding TextBoxVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalContentAlignment="Center" />
+            <TextBlock Text="{Binding Room.PersonAmount}" 
+                Visibility="{Binding TextBlockVisibility}"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
+
+            <Label>OwnedBy:</Label>
+            <ComboBox SelectedItem="{Binding Room.OwnedBy}" ItemsSource="{Binding Landlords}" DisplayMemberPath="FullName" IsSynchronizedWithCurrentItem="False" IsEnabled="{Binding IsLandlordComboboxEnabled}"/>
+
+            <Label>Location:</Label>
+            <ComboBox SelectedItem="{Binding Room.Location}" ItemsSource="{Binding Locations}" DisplayMemberPath="Name" IsSynchronizedWithCurrentItem="False" IsEnabled="{Binding IsLocationComboboxEnabled}"/>
+
+
+            <Button Content="Create/Update" Command="{Binding UpdateRoomCommand}" Margin="0 10 0 0" />
+        </StackPanel>
+    </Grid>
+</UserControl>
